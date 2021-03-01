@@ -17,7 +17,7 @@ function App() {
     setTeam(newTeam)
     
   }
-  console.log(team)
+  // console.log(team)
   return (
    
     <div >

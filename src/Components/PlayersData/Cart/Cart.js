@@ -1,11 +1,19 @@
 import React from 'react';
 
-const Cart = (team) => {
-    // const cricketer = props
-    console.log(team)
+const Cart = (props) => {
+    const cricketer = props.team
+    console.log(cricketer)
+    let addSalary = 0
+    for (let i = 0; i < cricketer.length; i++) {
+        const newSalary = cricketer[i].salary;
+        addSalary = addSalary + newSalary
+    }
     return (
         <div>
-            {/* <h1>This is cart: {props.team}</h1> */}
+            {
+                cricketer.map(pl => <p>Name: {pl.name + " " + "Salary: " + pl.salary}</p>)
+            }
+            <h3>Salary:{addSalary}</h3>
         </div>
     );
 };
